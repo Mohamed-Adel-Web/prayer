@@ -1,5 +1,5 @@
 /** @format */
-let ApiUrl = "http://api.aladhan.com/v1/timingsByCity?country=EG&city=";
+let ApiUrl = "https://api.aladhan.com/v1/timingsByCity?country=EG&city=";
 let chosenCity = document.querySelector(".chosen-city");
 let select = document.querySelector("select");
 let aladhanTime = document.querySelectorAll(".aladhan-time");
@@ -14,7 +14,8 @@ function selectCity(cityName) {
   chosenCity.textContent = `${cityName}`;
 }
 function getDataByCity(cityName) {
-  axios.get(`${ApiUrl}+${cityName}`)
+  axios
+    .get(`${ApiUrl}` + `${cityName}`)
     .then(function (response) {
       let i = 0;
       dataAr.textContent = response.data.data.date.hijri.weekday.ar;
@@ -44,5 +45,3 @@ function addCity(newCityVal, newCityText) {
 }
 addCity("aswan", "أسوان");
 addCity("luxor", "الأقصر");
-
-
