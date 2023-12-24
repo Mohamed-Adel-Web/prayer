@@ -1,0 +1,43 @@
+/** @format */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+:root {
+  --main-color: #15003e;
+  --secondary-color: #5c1ad7;
+}
+body {
+  background-color: var(--main-color);
+}
+.chosen-city {
+  font-size: 5rem;
+}
+.aladhan-name {
+  background-color: var(--secondary-color);
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  color: white;
+}
+.aladhan-time {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2.5rem 0;
+}
+.col-lg-2 {
+  margin-bottom: 1rem;
+}
+select {
+  cursor: pointer;
+}
+option {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
